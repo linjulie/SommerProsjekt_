@@ -27,7 +27,7 @@ namespace Sommerprosjekt_
 
         private void btn_OK_Click(object sender, EventArgs e)
         {
-               
+
             //saves the entered text to the demo tetx file. replaces previous text if new text is entered
             /*TextWriter txt = new StreamWriter("C:\\demo\\demo.txt");
             txt.Write(inputBox1.Text);
@@ -37,9 +37,43 @@ namespace Sommerprosjekt_
             txt2.Write(txtbox_Header.Text);
             txt2.Close();*/
 
+            string connectionString;
+            string sql;
 
-          
+
+            connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
+
+            sql = "INSERT INTO dbo.PopUp ([PopUpID], [Header], [Section]) VALUES (@id, @header, @section)";
             
+
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    cnn.Open();
+                    
+                    //count amoount of columns in PopUp table
+                    SqlCommand cmd2 = new SqlCommand("SELECT count(*) AS NUMBEROFCOLUMNS FROM dbo.PopUp", cnn);
+                    //saves result in an integer, this will be used to give the new popup object an correct id
+                    int result = (int)cmd2.ExecuteScalar();
+                    
+                    SqlCommand cmd = new SqlCommand(sql, cnn);
+                    cmd.Parameters.AddWithValue("@id", result + 1);
+                    cmd.Parameters.AddWithValue("@header", txtbox_Header.Text);
+                    cmd.Parameters.AddWithValue("@section", inputBox1.Text);
+                    cmd.ExecuteNonQuery();
+                    cnn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+
+
+
+
         }
 
 
