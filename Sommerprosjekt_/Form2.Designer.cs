@@ -29,56 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btn_exit = new System.Windows.Forms.Button();
-            this.txtBox_Output = new System.Windows.Forms.TextBox();
-            this.txt_headerOutput = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.popUpDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.popUpDataSet = new Sommerprosjekt_.PopUpDataSet();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label_header = new System.Windows.Forms.Label();
+            this.label_section = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.popUpDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popUpDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_exit
-            // 
-            this.btn_exit.Location = new System.Drawing.Point(567, 321);
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(75, 23);
-            this.btn_exit.TabIndex = 0;
-            this.btn_exit.Text = "btn.test";
-            this.btn_exit.UseVisualStyleBackColor = true;
-            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
-            // 
-            // txtBox_Output
-            // 
-            this.txtBox_Output.Location = new System.Drawing.Point(65, 76);
-            this.txtBox_Output.Multiline = true;
-            this.txtBox_Output.Name = "txtBox_Output";
-            this.txtBox_Output.ReadOnly = true;
-            this.txtBox_Output.Size = new System.Drawing.Size(448, 323);
-            this.txtBox_Output.TabIndex = 1;
-            // 
-            // txt_headerOutput
-            // 
-            this.txt_headerOutput.Location = new System.Drawing.Point(65, 31);
-            this.txt_headerOutput.Name = "txt_headerOutput";
-            this.txt_headerOutput.ReadOnly = true;
-            this.txt_headerOutput.Size = new System.Drawing.Size(448, 22);
-            this.txt_headerOutput.TabIndex = 2;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.popUpDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(539, 76);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // popUpDataSetBindingSource
             // 
@@ -90,19 +47,34 @@
             this.popUpDataSet.DataSetName = "PopUpDataSet";
             this.popUpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // label_header
+            // 
+            this.label_header.AutoSize = true;
+            this.label_header.Location = new System.Drawing.Point(85, 45);
+            this.label_header.Name = "label_header";
+            this.label_header.Size = new System.Drawing.Size(53, 16);
+            this.label_header.TabIndex = 0;
+            this.label_header.Text = "Header";
+            // 
+            // label_section
+            // 
+            this.label_section.AutoSize = true;
+            this.label_section.Location = new System.Drawing.Point(88, 102);
+            this.label_section.Name = "label_section";
+            this.label_section.Size = new System.Drawing.Size(52, 16);
+            this.label_section.TabIndex = 1;
+            this.label_section.Text = "Sectoin";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txt_headerOutput);
-            this.Controls.Add(this.txtBox_Output);
-            this.Controls.Add(this.btn_exit);
+            this.Controls.Add(this.label_section);
+            this.Controls.Add(this.label_header);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popUpDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popUpDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -111,12 +83,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_exit;
-        private System.Windows.Forms.TextBox txtBox_Output;
-        private System.Windows.Forms.TextBox txt_headerOutput;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource popUpDataSetBindingSource;
         private PopUpDataSet popUpDataSet;
+        private System.Windows.Forms.Label label_header;
+        private System.Windows.Forms.Label label_section;
     }
 }

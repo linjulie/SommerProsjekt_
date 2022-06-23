@@ -31,31 +31,31 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.inputBox1 = new System.Windows.Forms.TextBox();
-            this.btn_OK = new System.Windows.Forms.Button();
+            this.popUpBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sommerProsjektDataSet = new Sommerprosjekt_.SommerProsjektDataSet();
+            this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Preview = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.txtbox_Header = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_connect = new System.Windows.Forms.Button();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.sommerProsjektDataSet = new Sommerprosjekt_.SommerProsjektDataSet();
-            this.popUpBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.popUpTableAdapter = new Sommerprosjekt_.SommerProsjektDataSetTableAdapters.PopUpTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.popUpBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popUpBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // inputBox1
@@ -66,17 +66,26 @@
             this.inputBox1.Name = "inputBox1";
             this.inputBox1.Size = new System.Drawing.Size(460, 280);
             this.inputBox1.TabIndex = 2;
-            this.inputBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // btn_OK
+            // popUpBindingSource
             // 
-            this.btn_OK.Location = new System.Drawing.Point(584, 338);
-            this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(75, 23);
-            this.btn_OK.TabIndex = 3;
-            this.btn_OK.Text = "OK";
-            this.btn_OK.UseVisualStyleBackColor = true;
-            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
+            this.popUpBindingSource.DataMember = "PopUp";
+            this.popUpBindingSource.DataSource = this.sommerProsjektDataSet;
+            // 
+            // sommerProsjektDataSet
+            // 
+            this.sommerProsjektDataSet.DataSetName = "SommerProsjektDataSet";
+            this.sommerProsjektDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.Location = new System.Drawing.Point(584, 338);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(75, 23);
+            this.btn_Save.TabIndex = 3;
+            this.btn_Save.Text = "Save";
+            this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Preview
             // 
@@ -105,7 +114,6 @@
             this.txtbox_Header.Name = "txtbox_Header";
             this.txtbox_Header.Size = new System.Drawing.Size(335, 22);
             this.txtbox_Header.TabIndex = 6;
-            this.txtbox_Header.TextChanged += new System.EventHandler(this.txtbox_Header_TextChanged);
             // 
             // label1
             // 
@@ -118,11 +126,11 @@
             // 
             // btn_connect
             // 
-            this.btn_connect.Location = new System.Drawing.Point(146, 450);
+            this.btn_connect.Location = new System.Drawing.Point(87, 411);
             this.btn_connect.Name = "btn_connect";
-            this.btn_connect.Size = new System.Drawing.Size(75, 23);
+            this.btn_connect.Size = new System.Drawing.Size(239, 23);
             this.btn_connect.TabIndex = 8;
-            this.btn_connect.Text = "connect";
+            this.btn_connect.Text = "Show PopUp Table";
             this.btn_connect.UseVisualStyleBackColor = true;
             this.btn_connect.Click += new System.EventHandler(this.btn_connect_Click);
             // 
@@ -156,6 +164,31 @@
             this.bindingNavigator1.TabIndex = 9;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -188,16 +221,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -220,36 +246,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // sommerProsjektDataSet
-            // 
-            this.sommerProsjektDataSet.DataSetName = "SommerProsjektDataSet";
-            this.sommerProsjektDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // popUpBindingSource
-            // 
-            this.popUpBindingSource.DataMember = "PopUp";
-            this.popUpBindingSource.DataSource = this.sommerProsjektDataSet;
             // 
             // popUpTableAdapter
             // 
@@ -266,16 +264,16 @@
             this.Controls.Add(this.txtbox_Header);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Preview);
-            this.Controls.Add(this.btn_OK);
+            this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.inputBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.popUpBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popUpBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,7 +281,7 @@
 
         #endregion
         private System.Windows.Forms.TextBox inputBox1;
-        private System.Windows.Forms.Button btn_OK;
+        private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Preview;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.TextBox txtbox_Header;

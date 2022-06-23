@@ -20,28 +20,32 @@ namespace Sommerprosjekt_
       
         }
 
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void Form2_Load(object sender, EventArgs e)
         {
-            string header = System.IO.File.ReadLines("C:\\demo\\header.txt").First();
-            txt_headerOutput.Text = header;
-
-            // read from text file: 
-            string text = System.IO.File.ReadAllText("C:\\demo\\demo.txt");
-            txtBox_Output.Text = text;
+            /*string connectionString;
+            string sql1, sql2;
             
-            //Will show preview of text written in previous form...
+            connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
+            sql1 = "SELECT [Header], [Section] FROM dbo.PopUp WHERE PopUpID = 2";
 
-            
+
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    cnn.Open();
+                    SqlCommand cmd = new SqlCommand(sql1, cnn);
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }  */ 
+
+
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
 }

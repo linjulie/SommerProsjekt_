@@ -19,30 +19,15 @@ namespace Sommerprosjekt_
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btn_Save_Click(object sender, EventArgs e)
         {
-            //Limited to x amount of characters
-            
-        }
-
-        private void btn_OK_Click(object sender, EventArgs e)
-        {
-
-            //saves the entered text to the demo tetx file. replaces previous text if new text is entered
-            /*TextWriter txt = new StreamWriter("C:\\demo\\demo.txt");
-            txt.Write(inputBox1.Text);
-            txt.Close();
-
-            TextWriter txt2 = new StreamWriter("C:\\demo\\header.txt");
-            txt2.Write(txtbox_Header.Text);
-            txt2.Close();*/
-
+            //define variables
             string connectionString;
             string sql;
 
-
+            // connection string to database
             connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
-
+            //sql query that inserts new values to the dbo.PopUp table
             sql = "INSERT INTO dbo.PopUp ([PopUpID], [Header], [Section]) VALUES (@id, @header, @section)";
             
 
@@ -58,6 +43,7 @@ namespace Sommerprosjekt_
                     int result = (int)cmd2.ExecuteScalar();
                     
                     SqlCommand cmd = new SqlCommand(sql, cnn);
+                    //Adds the new popup object to the database  
                     cmd.Parameters.AddWithValue("@id", result + 1);
                     cmd.Parameters.AddWithValue("@header", txtbox_Header.Text);
                     cmd.Parameters.AddWithValue("@section", inputBox1.Text);
@@ -69,11 +55,6 @@ namespace Sommerprosjekt_
                     MessageBox.Show(ex.Message);
                 }
             }
-
-
-
-
-
         }
 
 
@@ -88,15 +69,8 @@ namespace Sommerprosjekt_
         {
             //Opens a window showing the preview of the pop-up
             Form2 form2 = new Form2();
-            form2.ShowDialog(); 
+            form2.Show();
 
-
-        }
-
-        private void txtbox_Header_TextChanged(object sender, EventArgs e)
-        {
-            //user can enter a header limited to one line
- 
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -139,8 +113,6 @@ namespace Sommerprosjekt_
             while (dataReader.Read())
             {
                 Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + "\n";
-
-                
             }
 
             //Displaying the output in a messagebox
