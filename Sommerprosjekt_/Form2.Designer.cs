@@ -33,11 +33,11 @@
             this.txtBox_Output = new System.Windows.Forms.TextBox();
             this.txt_headerOutput = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.popUpDataSet = new Sommerprosjekt_.PopUpDataSet();
             this.popUpDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.popUpDataSet = new Sommerprosjekt_.PopUpDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popUpDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popUpDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popUpDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_exit
@@ -78,16 +78,17 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // popUpDataSet
-            // 
-            this.popUpDataSet.DataSetName = "PopUpDataSet";
-            this.popUpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // popUpDataSetBindingSource
             // 
             this.popUpDataSetBindingSource.DataSource = this.popUpDataSet;
             this.popUpDataSetBindingSource.Position = 0;
+            // 
+            // popUpDataSet
+            // 
+            this.popUpDataSet.DataSetName = "PopUpDataSet";
+            this.popUpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Form2
             // 
@@ -102,8 +103,8 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popUpDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popUpDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popUpDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

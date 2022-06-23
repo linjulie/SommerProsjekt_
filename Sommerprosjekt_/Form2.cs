@@ -16,7 +16,8 @@ namespace Sommerprosjekt_
         public Form2()
         {
             InitializeComponent();
-            //BindGrid();
+            
+      
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -34,27 +35,13 @@ namespace Sommerprosjekt_
             txtBox_Output.Text = text;
             
             //Will show preview of text written in previous form...
+
+            
         }
 
-        /*private void BindGrid()
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string constring = @"Data Source=\PopUp.mdf";
-            using (SqlConnection con = new SqlConnection(constring))
-            {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM PopUp", con))
-                {
-                    cmd.CommandType = CommandType.Text;
-                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-                    {
-                        using (DataTable dt = new DataTable())
-                        {
-                            sda.Fill(dt);
-                            dataGridView1.DataSource = dt;
-                        }
-                    }
-                }
-            }
-        }*/
 
+        }
     }
 }
