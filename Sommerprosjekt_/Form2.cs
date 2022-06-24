@@ -13,7 +13,7 @@ namespace Sommerprosjekt_
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        public Form2(bool IsHeader)
         {
             InitializeComponent();
             
@@ -22,30 +22,19 @@ namespace Sommerprosjekt_
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            /*string connectionString;
+            string connectionString;
+            SqlConnection connection;
             string sql1, sql2;
             
             connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
-            sql1 = "SELECT [Header], [Section] FROM dbo.PopUp WHERE PopUpID = 2";
-
-
-            using (SqlConnection cnn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    cnn.Open();
-                    SqlCommand cmd = new SqlCommand(sql1, cnn);
-                    
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }  */ 
-
+            
+            sql1 = "SELECT [Header] FROM dbo.PopUp WHERE PopUpID = 2";
+            sql2 = "SELECT [Section] FROM dbo.PopUp WHERE PopUpID = 2";
+            
+            
 
         }
 
-       
+
     }
 }

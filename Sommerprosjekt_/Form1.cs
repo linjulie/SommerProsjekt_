@@ -65,11 +65,16 @@ namespace Sommerprosjekt_
             
         }
 
+        public bool IsHeader = false;
         private void btn_Preview_Click(object sender, EventArgs e)
         {
-            //Opens a window showing the preview of the pop-up
-            Form2 form2 = new Form2();
-            form2.Show();
+            //Opens the Form2 view
+            //Form2 form2 = new Form2();
+            //form2.Show();
+
+            // Saves header and section in a shared(?) value
+            //Opens a new form displaying the popup content
+
 
         }
 
