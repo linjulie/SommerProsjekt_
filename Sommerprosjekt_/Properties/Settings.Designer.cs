@@ -44,5 +44,27 @@ namespace Sommerprosjekt_.Properties {
                 return ((string)(this["Database1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\PopUp.mdf;Int" +
+            "egrated Security=True")]
+        public string PopUpConnectionString {
+            get {
+                return ((string)(this["PopUpConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=SommerProsjekt;Integrated Sec" +
+            "urity=True")]
+        public string SommerProsjektConnectionString {
+            get {
+                return ((string)(this["SommerProsjektConnectionString"]));
+            }
+        }
     }
 }
