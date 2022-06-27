@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login_form));
             this.inputBox1 = new System.Windows.Forms.TextBox();
             this.popUpBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sommerProsjektDataSet = new Sommerprosjekt_.SommerProsjektDataSet();

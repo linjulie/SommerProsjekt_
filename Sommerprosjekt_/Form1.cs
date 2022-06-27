@@ -37,7 +37,8 @@ namespace Sommerprosjekt_
                 {
                     cnn.Open();
                     
-                    //count amoount of columns in PopUp table
+                    //this will be changed with aout incremented id...
+                    //count amount of columns in PopUp table
                     SqlCommand cmd2 = new SqlCommand("SELECT count(*) AS NUMBEROFCOLUMNS FROM dbo.PopUp", cnn);
                     //saves result in an integer, this will be used to give the new popup object an correct id
                     int result = (int)cmd2.ExecuteScalar();
