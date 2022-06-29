@@ -136,33 +136,33 @@
             // 
             // bindingNavigator1
             // 
-            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.popUpBindingSource;
-            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(787, 27);
-            this.bindingNavigator1.TabIndex = 9;
-            this.bindingNavigator1.Text = "bindingNavigator1";
+            //this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            //this.bindingNavigator1.BindingSource = this.popUpBindingSource;
+            //this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
+            //this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
+            //this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            //this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            //this.bindingNavigatorMoveFirstItem,
+            //this.bindingNavigatorMovePreviousItem,
+            //this.bindingNavigatorSeparator,
+            //this.bindingNavigatorPositionItem,
+            //this.bindingNavigatorCountItem,
+            //this.bindingNavigatorSeparator1,
+            //this.bindingNavigatorMoveNextItem,
+            //this.bindingNavigatorMoveLastItem,
+            //this.bindingNavigatorSeparator2,
+            //this.bindingNavigatorAddNewItem,
+            //this.bindingNavigatorDeleteItem});
+            //this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
+            //this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            //this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            //this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            //this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            //this.bindingNavigator1.Name = "bindingNavigator1";
+            //this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
+            //this.bindingNavigator1.Size = new System.Drawing.Size(787, 27);
+            //this.bindingNavigator1.TabIndex = 9;
+            //this.bindingNavigator1.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
