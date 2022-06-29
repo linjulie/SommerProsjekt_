@@ -129,6 +129,31 @@ namespace Sommerprosjekt_
             command.Dispose();
             cnn.Close();
         }
-        
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            //When pressed, the database will be updated with the new values
+            string connectionString;
+            SqlConnection cnn;
+            string sql;
+            //connection string
+            connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
+            //establishes the connection to the database
+            cnn = new SqlConnection(connectionString);
+            //Opens connection
+            cnn.Open();
+            //SQL statement, updates the dbo.PopUp table
+            sql = "UPDATE dbo.PopUp SET Header = @header, Section = @section WHERE PopUpID = @id";
+            //executes the SQL query, and connection object
+            SqlCommand cmd = new SqlCommand(sql, cnn);
+            //Adds the new popup object to the database
+            cmd.Parameters.AddWithValue("@id", txtbox_ID.Text);
+            cmd.Parameters.AddWithValue("@header", txtbox_Header.Text);
+            cmd.Parameters.AddWithValue("@section", inputBox1.Text);
+            cmd.ExecuteNonQuery();
+            //Closes connection
+            cnn.Close();
+            
+        }
     }
 }

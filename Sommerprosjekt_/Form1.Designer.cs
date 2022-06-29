@@ -35,7 +35,6 @@
             this.sommerProsjektDataSet = new Sommerprosjekt_.SommerProsjektDataSet();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Preview = new System.Windows.Forms.Button();
-            this.btn_Cancel = new System.Windows.Forms.Button();
             this.txtbox_Header = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_connect = new System.Windows.Forms.Button();
@@ -52,19 +51,27 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.popUpTableAdapter = new Sommerprosjekt_.SommerProsjektDataSetTableAdapters.PopUpTableAdapter();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.popUpIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.headerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtbox_ID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.popUpBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // inputBox1
             // 
             this.inputBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpBindingSource, "Section", true));
-            this.inputBox1.Location = new System.Drawing.Point(73, 81);
+            this.inputBox1.Location = new System.Drawing.Point(95, 110);
             this.inputBox1.Multiline = true;
             this.inputBox1.Name = "inputBox1";
-            this.inputBox1.Size = new System.Drawing.Size(460, 280);
+            this.inputBox1.Size = new System.Drawing.Size(335, 280);
             this.inputBox1.TabIndex = 2;
             // 
             // popUpBindingSource
@@ -79,17 +86,17 @@
             // 
             // btn_Save
             // 
-            this.btn_Save.Location = new System.Drawing.Point(584, 338);
+            this.btn_Save.Location = new System.Drawing.Point(461, 81);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(75, 23);
             this.btn_Save.TabIndex = 3;
-            this.btn_Save.Text = "Save";
+            this.btn_Save.Text = "Insert";
             this.btn_Save.UseVisualStyleBackColor = true;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Preview
             // 
-            this.btn_Preview.Location = new System.Drawing.Point(584, 380);
+            this.btn_Preview.Location = new System.Drawing.Point(461, 338);
             this.btn_Preview.Name = "btn_Preview";
             this.btn_Preview.Size = new System.Drawing.Size(75, 23);
             this.btn_Preview.TabIndex = 4;
@@ -97,20 +104,10 @@
             this.btn_Preview.UseVisualStyleBackColor = true;
             this.btn_Preview.Click += new System.EventHandler(this.btn_Preview_Click);
             // 
-            // btn_Cancel
-            // 
-            this.btn_Cancel.Location = new System.Drawing.Point(584, 424);
-            this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_Cancel.TabIndex = 5;
-            this.btn_Cancel.Text = "Cancel";
-            this.btn_Cancel.UseVisualStyleBackColor = true;
-            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
-            // 
             // txtbox_Header
             // 
             this.txtbox_Header.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpBindingSource, "Header", true));
-            this.txtbox_Header.Location = new System.Drawing.Point(73, 42);
+            this.txtbox_Header.Location = new System.Drawing.Point(95, 82);
             this.txtbox_Header.Name = "txtbox_Header";
             this.txtbox_Header.Size = new System.Drawing.Size(335, 22);
             this.txtbox_Header.TabIndex = 6;
@@ -118,7 +115,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 48);
+            this.label1.Location = new System.Drawing.Point(12, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 7;
@@ -126,7 +123,7 @@
             // 
             // btn_connect
             // 
-            this.btn_connect.Location = new System.Drawing.Point(87, 411);
+            this.btn_connect.Location = new System.Drawing.Point(95, 435);
             this.btn_connect.Name = "btn_connect";
             this.btn_connect.Size = new System.Drawing.Size(239, 23);
             this.btn_connect.TabIndex = 8;
@@ -136,33 +133,19 @@
             // 
             // bindingNavigator1
             // 
-            //this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            //this.bindingNavigator1.BindingSource = this.popUpBindingSource;
-            //this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
-            //this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-            //this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            //this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            //this.bindingNavigatorMoveFirstItem,
-            //this.bindingNavigatorMovePreviousItem,
-            //this.bindingNavigatorSeparator,
-            //this.bindingNavigatorPositionItem,
-            //this.bindingNavigatorCountItem,
-            //this.bindingNavigatorSeparator1,
-            //this.bindingNavigatorMoveNextItem,
-            //this.bindingNavigatorMoveLastItem,
-            //this.bindingNavigatorSeparator2,
-            //this.bindingNavigatorAddNewItem,
-            //this.bindingNavigatorDeleteItem});
-            //this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
-            //this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            //this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            //this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            //this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            //this.bindingNavigator1.Name = "bindingNavigator1";
-            //this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            //this.bindingNavigator1.Size = new System.Drawing.Size(787, 27);
-            //this.bindingNavigator1.TabIndex = 9;
-            //this.bindingNavigator1.Text = "bindingNavigator1";
+            this.bindingNavigator1.AddNewItem = null;
+            this.bindingNavigator1.CountItem = null;
+            this.bindingNavigator1.DeleteItem = null;
+            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator1.MoveFirstItem = null;
+            this.bindingNavigator1.MoveLastItem = null;
+            this.bindingNavigator1.MoveNextItem = null;
+            this.bindingNavigator1.MovePreviousItem = null;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = null;
+            this.bindingNavigator1.Size = new System.Drawing.Size(1183, 25);
+            this.bindingNavigator1.TabIndex = 0;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -253,16 +236,96 @@
             // 
             this.popUpTableAdapter.ClearBeforeFill = true;
             // 
+            // btn_update
+            // 
+            this.btn_update.Location = new System.Drawing.Point(461, 139);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(75, 23);
+            this.btn_update.TabIndex = 9;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(461, 200);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.TabIndex = 10;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.popUpIDDataGridViewTextBoxColumn,
+            this.headerDataGridViewTextBoxColumn,
+            this.sectionDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.popUpBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(566, 82);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(569, 280);
+            this.dataGridView1.TabIndex = 11;
+            // 
+            // popUpIDDataGridViewTextBoxColumn
+            // 
+            this.popUpIDDataGridViewTextBoxColumn.DataPropertyName = "PopUpID";
+            this.popUpIDDataGridViewTextBoxColumn.HeaderText = "PopUpID";
+            this.popUpIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.popUpIDDataGridViewTextBoxColumn.Name = "popUpIDDataGridViewTextBoxColumn";
+            this.popUpIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // headerDataGridViewTextBoxColumn
+            // 
+            this.headerDataGridViewTextBoxColumn.DataPropertyName = "Header";
+            this.headerDataGridViewTextBoxColumn.HeaderText = "Header";
+            this.headerDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.headerDataGridViewTextBoxColumn.Name = "headerDataGridViewTextBoxColumn";
+            this.headerDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sectionDataGridViewTextBoxColumn
+            // 
+            this.sectionDataGridViewTextBoxColumn.DataPropertyName = "Section";
+            this.sectionDataGridViewTextBoxColumn.HeaderText = "Section";
+            this.sectionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sectionDataGridViewTextBoxColumn.Name = "sectionDataGridViewTextBoxColumn";
+            this.sectionDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // txtbox_ID
+            // 
+            this.txtbox_ID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpBindingSource, "PopUpID", true));
+            this.txtbox_ID.Location = new System.Drawing.Point(95, 42);
+            this.txtbox_ID.Name = "txtbox_ID";
+            this.txtbox_ID.Size = new System.Drawing.Size(85, 22);
+            this.txtbox_ID.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 16);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "ID";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 530);
+            this.ClientSize = new System.Drawing.Size(1183, 484);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtbox_ID);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_update);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.btn_connect);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbox_Header);
-            this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Preview);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.inputBox1);
@@ -272,8 +335,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.popUpBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,7 +345,6 @@
         private System.Windows.Forms.TextBox inputBox1;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Preview;
-        private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.TextBox txtbox_Header;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_connect;
@@ -302,6 +363,14 @@
         private SommerProsjektDataSet sommerProsjektDataSet;
         private System.Windows.Forms.BindingSource popUpBindingSource;
         private SommerProsjektDataSetTableAdapters.PopUpTableAdapter popUpTableAdapter;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn popUpIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn headerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sectionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtbox_ID;
+        private System.Windows.Forms.Label label2;
     }
 }
 
