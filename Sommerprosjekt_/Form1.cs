@@ -19,6 +19,13 @@ namespace Sommerprosjekt_
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'sommerProsjektDataSet.PopUp' table. You can move, or remove it, as needed.
+            this.popUpTableAdapter.Fill(this.sommerProsjektDataSet.PopUp);
+            
+        }
+
         //------------------Inserts new object-----------------------------------------
         private void btn_Save_Click(object sender, EventArgs e)
         {
@@ -64,13 +71,6 @@ namespace Sommerprosjekt_
         {
 
 
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'sommerProsjektDataSet.PopUp' table. You can move, or remove it, as needed.
-            this.popUpTableAdapter.Fill(this.sommerProsjektDataSet.PopUp);
 
         }
 
@@ -179,5 +179,7 @@ namespace Sommerprosjekt_
             cnn.Close();
             
         }
+
+
     }
 }

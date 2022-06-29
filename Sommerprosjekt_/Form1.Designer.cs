@@ -59,6 +59,7 @@
             this.sectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtbox_ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.popUpBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -68,10 +69,12 @@
             // inputBox1
             // 
             this.inputBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpBindingSource, "Section", true));
+            this.inputBox1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.inputBox1.Location = new System.Drawing.Point(95, 110);
             this.inputBox1.Multiline = true;
             this.inputBox1.Name = "inputBox1";
-            this.inputBox1.Size = new System.Drawing.Size(335, 280);
+            this.inputBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.inputBox1.Size = new System.Drawing.Size(335, 448);
             this.inputBox1.TabIndex = 2;
             // 
             // popUpBindingSource
@@ -107,7 +110,8 @@
             // txtbox_Header
             // 
             this.txtbox_Header.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpBindingSource, "Header", true));
-            this.txtbox_Header.Location = new System.Drawing.Point(95, 82);
+            this.txtbox_Header.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtbox_Header.Location = new System.Drawing.Point(95, 81);
             this.txtbox_Header.Name = "txtbox_Header";
             this.txtbox_Header.Size = new System.Drawing.Size(335, 22);
             this.txtbox_Header.TabIndex = 6;
@@ -123,12 +127,13 @@
             // 
             // btn_connect
             // 
-            this.btn_connect.Location = new System.Drawing.Point(95, 435);
+            this.btn_connect.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btn_connect.Location = new System.Drawing.Point(95, 580);
             this.btn_connect.Name = "btn_connect";
             this.btn_connect.Size = new System.Drawing.Size(239, 23);
             this.btn_connect.TabIndex = 8;
             this.btn_connect.Text = "Show PopUp Table";
-            this.btn_connect.UseVisualStyleBackColor = true;
+            this.btn_connect.UseVisualStyleBackColor = false;
             this.btn_connect.Click += new System.EventHandler(this.btn_connect_Click);
             // 
             // bindingNavigator1
@@ -299,6 +304,7 @@
             // txtbox_ID
             // 
             this.txtbox_ID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpBindingSource, "PopUpID", true));
+            this.txtbox_ID.ForeColor = System.Drawing.Color.DeepPink;
             this.txtbox_ID.Location = new System.Drawing.Point(95, 42);
             this.txtbox_ID.Name = "txtbox_ID";
             this.txtbox_ID.Size = new System.Drawing.Size(85, 22);
@@ -313,11 +319,21 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "ID";
             // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Location = new System.Drawing.Point(566, 402);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(75, 23);
+            this.btn_refresh.TabIndex = 14;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1183, 484);
+            this.ClientSize = new System.Drawing.Size(1183, 625);
+            this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtbox_ID);
             this.Controls.Add(this.dataGridView1);
@@ -372,6 +388,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sectionDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox txtbox_ID;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }
 
