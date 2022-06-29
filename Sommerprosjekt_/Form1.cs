@@ -19,6 +19,7 @@ namespace Sommerprosjekt_
             InitializeComponent();
         }
 
+        //------------------Inserts new object-----------------------------------------
         private void btn_Save_Click(object sender, EventArgs e)
         {
             //define variables
@@ -58,23 +59,10 @@ namespace Sommerprosjekt_
             }
         }
 
-
-        private void btn_Cancel_Click(object sender, EventArgs e)
-        {
-            // when pressed window will be exited
-            this.Close();
-            
-        }
-
-        public bool IsHeader = false;
+        //------------------Shows preview of popup object------------------------------
         private void btn_Preview_Click(object sender, EventArgs e)
         {
-            //Opens the Form2 view
-            //Form2 form2 = new Form2();
-            //form2.Show();
 
-            // Saves header and section in a shared(?) value
-            //Opens a new form displaying the popup content
 
 
         }
@@ -86,7 +74,7 @@ namespace Sommerprosjekt_
 
         }
 
-        //Retrieves the data from the PopUp table
+        //--------------------------------------Shows all data-------------------------------
         private void btn_connect_Click(object sender, EventArgs e)
         {
             string connectionString;
@@ -130,20 +118,26 @@ namespace Sommerprosjekt_
             cnn.Close();
         }
 
+        //------------------------Update object------------------------
         private void btn_update_Click(object sender, EventArgs e)
         {
             //When pressed, the database will be updated with the new values
             string connectionString;
             SqlConnection cnn;
             string sql;
+            
             //connection string
             connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
+            
             //establishes the connection to the database
             cnn = new SqlConnection(connectionString);
+            
             //Opens connection
             cnn.Open();
+            
             //SQL statement, updates the dbo.PopUp table
             sql = "UPDATE dbo.PopUp SET Header = @header, Section = @section WHERE PopUpID = @id";
+            
             //executes the SQL query, and connection object
             SqlCommand cmd = new SqlCommand(sql, cnn);
             //Adds the new popup object to the database
@@ -151,31 +145,36 @@ namespace Sommerprosjekt_
             cmd.Parameters.AddWithValue("@header", txtbox_Header.Text);
             cmd.Parameters.AddWithValue("@section", inputBox1.Text);
             cmd.ExecuteNonQuery();
+            
             //Closes connection
             cnn.Close();
             
         }
 
+        //--------------------Delete object------------------------------
         private void btn_delete_Click(object sender, EventArgs e)
         {
             //When pressed, the object selected will be deleted
             string connectionString;
             SqlConnection cnn;
             string sql;
+            
             //connection string
             connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
+            
             //establishes the connection to the database
             cnn = new SqlConnection(connectionString);
+            
             //Opens connection
             cnn.Open();
+            
             //SQL statement, deletes the selected object from the dbo.PopUp table
             sql = "DELETE FROM dbo.PopUp WHERE PopUpID = @id";
             //executes the SQL query, and connection object
             SqlCommand cmd = new SqlCommand(sql, cnn);
-
             cmd.Parameters.AddWithValue("@id", txtbox_ID.Text);
-
             cmd.ExecuteNonQuery();
+            
             //Closes connection
             cnn.Close();
             
