@@ -155,5 +155,30 @@ namespace Sommerprosjekt_
             cnn.Close();
             
         }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            //When pressed, the object selected will be deleted
+            string connectionString;
+            SqlConnection cnn;
+            string sql;
+            //connection string
+            connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
+            //establishes the connection to the database
+            cnn = new SqlConnection(connectionString);
+            //Opens connection
+            cnn.Open();
+            //SQL statement, deletes the selected object from the dbo.PopUp table
+            sql = "DELETE FROM dbo.PopUp WHERE PopUpID = @id";
+            //executes the SQL query, and connection object
+            SqlCommand cmd = new SqlCommand(sql, cnn);
+
+            cmd.Parameters.AddWithValue("@id", txtbox_ID.Text);
+
+            cmd.ExecuteNonQuery();
+            //Closes connection
+            cnn.Close();
+            
+        }
     }
 }
