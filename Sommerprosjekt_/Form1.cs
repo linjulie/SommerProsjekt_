@@ -22,7 +22,7 @@ namespace Sommerprosjekt_
             InitializeComponent();
         }
         
-        public 
+         
         
         //to update the datagridview the GetData function does a query to get all data,
         //this happens after each insert, update and delete
