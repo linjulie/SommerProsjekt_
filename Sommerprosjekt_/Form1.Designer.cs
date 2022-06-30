@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.inputBox1 = new System.Windows.Forms.TextBox();
+            this.popUpTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sommerProsjektDataSet2 = new Sommerprosjekt_.SommerProsjektDataSet2();
             this.popUpBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sommerProsjektDataSet = new Sommerprosjekt_.SommerProsjektDataSet();
             this.btn_Save = new System.Windows.Forms.Button();
@@ -54,12 +56,15 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.popUpIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.headerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtbox_ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_refresh = new System.Windows.Forms.Button();
+            this.popUpTableTableAdapter = new Sommerprosjekt_.SommerProsjektDataSet2TableAdapters.PopUpTableTableAdapter();
+            this.popUpIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.headerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.popUpTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popUpBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -68,7 +73,7 @@
             // 
             // inputBox1
             // 
-            this.inputBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpBindingSource, "Section", true));
+            this.inputBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpTableBindingSource, "Section", true));
             this.inputBox1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.inputBox1.Location = new System.Drawing.Point(95, 110);
             this.inputBox1.Multiline = true;
@@ -76,6 +81,16 @@
             this.inputBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.inputBox1.Size = new System.Drawing.Size(335, 448);
             this.inputBox1.TabIndex = 2;
+            // 
+            // popUpTableBindingSource
+            // 
+            this.popUpTableBindingSource.DataMember = "PopUpTable";
+            this.popUpTableBindingSource.DataSource = this.sommerProsjektDataSet2;
+            // 
+            // sommerProsjektDataSet2
+            // 
+            this.sommerProsjektDataSet2.DataSetName = "SommerProsjektDataSet2";
+            this.sommerProsjektDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // popUpBindingSource
             // 
@@ -109,7 +124,7 @@
             // 
             // txtbox_Header
             // 
-            this.txtbox_Header.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpBindingSource, "Header", true));
+            this.txtbox_Header.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpTableBindingSource, "Header", true));
             this.txtbox_Header.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbox_Header.Location = new System.Drawing.Point(95, 81);
             this.txtbox_Header.Name = "txtbox_Header";
@@ -149,7 +164,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1183, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1056, 25);
             this.bindingNavigator1.TabIndex = 0;
             // 
             // bindingNavigatorAddNewItem
@@ -269,42 +284,18 @@
             this.popUpIDDataGridViewTextBoxColumn,
             this.headerDataGridViewTextBoxColumn,
             this.sectionDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.popUpBindingSource;
+            this.dataGridView1.DataSource = this.popUpTableBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(566, 82);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(569, 280);
+            this.dataGridView1.Size = new System.Drawing.Size(429, 280);
             this.dataGridView1.TabIndex = 11;
-            // 
-            // popUpIDDataGridViewTextBoxColumn
-            // 
-            this.popUpIDDataGridViewTextBoxColumn.DataPropertyName = "PopUpID";
-            this.popUpIDDataGridViewTextBoxColumn.HeaderText = "PopUpID";
-            this.popUpIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.popUpIDDataGridViewTextBoxColumn.Name = "popUpIDDataGridViewTextBoxColumn";
-            this.popUpIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // headerDataGridViewTextBoxColumn
-            // 
-            this.headerDataGridViewTextBoxColumn.DataPropertyName = "Header";
-            this.headerDataGridViewTextBoxColumn.HeaderText = "Header";
-            this.headerDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.headerDataGridViewTextBoxColumn.Name = "headerDataGridViewTextBoxColumn";
-            this.headerDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // sectionDataGridViewTextBoxColumn
-            // 
-            this.sectionDataGridViewTextBoxColumn.DataPropertyName = "Section";
-            this.sectionDataGridViewTextBoxColumn.HeaderText = "Section";
-            this.sectionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sectionDataGridViewTextBoxColumn.Name = "sectionDataGridViewTextBoxColumn";
-            this.sectionDataGridViewTextBoxColumn.Width = 125;
             // 
             // txtbox_ID
             // 
-            this.txtbox_ID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpBindingSource, "PopUpID", true));
-            this.txtbox_ID.ForeColor = System.Drawing.Color.DeepPink;
+            this.txtbox_ID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpTableBindingSource, "PopUpID", true));
+            this.txtbox_ID.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbox_ID.Location = new System.Drawing.Point(95, 42);
             this.txtbox_ID.Name = "txtbox_ID";
             this.txtbox_ID.Size = new System.Drawing.Size(85, 22);
@@ -327,12 +318,42 @@
             this.btn_refresh.TabIndex = 14;
             this.btn_refresh.Text = "Refresh";
             this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            // 
+            // popUpTableTableAdapter
+            // 
+            this.popUpTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // popUpIDDataGridViewTextBoxColumn
+            // 
+            this.popUpIDDataGridViewTextBoxColumn.DataPropertyName = "PopUpID";
+            this.popUpIDDataGridViewTextBoxColumn.HeaderText = "PopUpID";
+            this.popUpIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.popUpIDDataGridViewTextBoxColumn.Name = "popUpIDDataGridViewTextBoxColumn";
+            this.popUpIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.popUpIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // headerDataGridViewTextBoxColumn
+            // 
+            this.headerDataGridViewTextBoxColumn.DataPropertyName = "Header";
+            this.headerDataGridViewTextBoxColumn.HeaderText = "Header";
+            this.headerDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.headerDataGridViewTextBoxColumn.Name = "headerDataGridViewTextBoxColumn";
+            this.headerDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sectionDataGridViewTextBoxColumn
+            // 
+            this.sectionDataGridViewTextBoxColumn.DataPropertyName = "Section";
+            this.sectionDataGridViewTextBoxColumn.HeaderText = "Section";
+            this.sectionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sectionDataGridViewTextBoxColumn.Name = "sectionDataGridViewTextBoxColumn";
+            this.sectionDataGridViewTextBoxColumn.Width = 125;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1183, 625);
+            this.ClientSize = new System.Drawing.Size(1056, 625);
             this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtbox_ID);
@@ -349,6 +370,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.popUpTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popUpBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
@@ -383,12 +406,15 @@
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn popUpIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn headerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sectionDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox txtbox_ID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_refresh;
+        private SommerProsjektDataSet2 sommerProsjektDataSet2;
+        private System.Windows.Forms.BindingSource popUpTableBindingSource;
+        private SommerProsjektDataSet2TableAdapters.PopUpTableTableAdapter popUpTableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn popUpIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn headerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sectionDataGridViewTextBoxColumn;
     }
 }
 

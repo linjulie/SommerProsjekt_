@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,15 +15,47 @@ namespace Sommerprosjekt_
 {
     public partial class Form1 : Form
     {
+        DBConnect con = new DBConnect();
+        private static ArrayList ListID = new ArrayList();
+        private static ArrayList ListHeader = new ArrayList();
+        private static ArrayList ListSection = new ArrayList();
+
+        private BindingSource bindingsource1 = new BindingSource();
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            bindingsource1.DataSource = GetData("SELECT * FROM dbo.PopUpTable");
+            dataGridView1.DataSource = bindingsource1;
+
+        }
+        
+        private static DataTable GetData(string sqlCommand)
+        {
+            string connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
+
+            SqlConnection popupConnection = new SqlConnection(connectionString);
+
+            SqlCommand command = new SqlCommand(sqlCommand, popupConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = command;
+
+            DataTable table = new DataTable();
+            table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+            adapter.Fill(table);
+            
+            return table;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sommerProsjektDataSet2.PopUpTable' table. You can move, or remove it, as needed.
+            this.popUpTableTableAdapter.Fill(this.sommerProsjektDataSet2.PopUpTable);
             // TODO: This line of code loads data into the 'sommerProsjektDataSet.PopUp' table. You can move, or remove it, as needed.
-            this.popUpTableAdapter.Fill(this.sommerProsjektDataSet.PopUp);
+            //this.popUpTableAdapter.Fill(this.sommerProsjektDataSet.PopUp);
             
         }
 
@@ -36,7 +69,7 @@ namespace Sommerprosjekt_
             // connection string to database
             connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
             //sql query that inserts new values to the dbo.PopUp table
-            sql = "INSERT INTO dbo.PopUp ([PopUpID], [Header], [Section]) VALUES (@id, @header, @section)";
+            sql = "INSERT INTO dbo.PopUpTable ([Header], [Section]) VALUES (@header, @section)";
             
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
@@ -45,15 +78,8 @@ namespace Sommerprosjekt_
                 {
                     cnn.Open();
                     
-                    //this will be changed with aout incremented id...
-                    //count amount of columns in PopUp table
-                    SqlCommand cmd2 = new SqlCommand("SELECT count(*) AS NUMBEROFCOLUMNS FROM dbo.PopUp", cnn);
-                    //saves result in an integer, this will be used to give the new popup object an correct id
-                    int result = (int)cmd2.ExecuteScalar();
-                    
                     SqlCommand cmd = new SqlCommand(sql, cnn);
                     //Adds the new popup object to the database  
-                    cmd.Parameters.AddWithValue("@id", result + 1);
                     cmd.Parameters.AddWithValue("@header", txtbox_Header.Text);
                     cmd.Parameters.AddWithValue("@section", inputBox1.Text);
                     cmd.ExecuteNonQuery();
@@ -64,13 +90,15 @@ namespace Sommerprosjekt_
                     MessageBox.Show(ex.Message);
                 }
             }
+            
         }
 
         //------------------Shows preview of popup object------------------------------
         private void btn_Preview_Click(object sender, EventArgs e)
         {
 
-
+            //displays header and section in a new form
+            
 
         }
 
@@ -95,7 +123,7 @@ namespace Sommerprosjekt_
             string sql, Output="";
 
             //SQL statement, fetches everything from the dbo.PopUp table
-            sql = "SELECT * FROM dbo.PopUp";
+            sql = "SELECT * FROM dbo.PopUpTable";
 
             //executes the SQL query, and connection object
             command = new SqlCommand(sql, cnn);
@@ -136,7 +164,7 @@ namespace Sommerprosjekt_
             cnn.Open();
             
             //SQL statement, updates the dbo.PopUp table
-            sql = "UPDATE dbo.PopUp SET Header = @header, Section = @section WHERE PopUpID = @id";
+            sql = "UPDATE dbo.PopUpTable SET Header = @header, Section = @section WHERE PopUpID = @id";
             
             //executes the SQL query, and connection object
             SqlCommand cmd = new SqlCommand(sql, cnn);
@@ -149,6 +177,7 @@ namespace Sommerprosjekt_
             //Closes connection
             cnn.Close();
             
+
         }
 
         //--------------------Delete object------------------------------
@@ -169,12 +198,12 @@ namespace Sommerprosjekt_
             cnn.Open();
             
             //SQL statement, deletes the selected object from the dbo.PopUp table
-            sql = "DELETE FROM dbo.PopUp WHERE PopUpID = @id";
+            sql = "DELETE FROM dbo.PopUpTable WHERE PopUpID = @id";
             //executes the SQL query, and connection object
             SqlCommand cmd = new SqlCommand(sql, cnn);
             cmd.Parameters.AddWithValue("@id", txtbox_ID.Text);
             cmd.ExecuteNonQuery();
-            
+
             //Closes connection
             cnn.Close();
             
