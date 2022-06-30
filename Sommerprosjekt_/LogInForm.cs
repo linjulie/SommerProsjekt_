@@ -63,5 +63,10 @@ namespace login_form
             Application.Exit();
 
         }
+
+        private void loginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

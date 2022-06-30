@@ -22,8 +22,26 @@ namespace Sommerprosjekt_
             InitializeComponent();
         }
 
-     
-        
+        //------------"global" variable---------------------------
+        public static string header = "";
+        public static string section = "";
+
+
+        //------------------Shows preview of popup object------------------------------
+        private void btn_Preview_Click(object sender, EventArgs e)
+        {
+            //set global variables to be txtbox input
+            header = txtbox_Header.Text;
+            section = inputBox1.Text;
+
+            //When pressed, values entered in header and section are shown in a popup window
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+
+        }
+
+
+
         //to update the datagridview the GetData function does a query to get all data,
         //this happens after each insert, update and delete
         private static DataTable GetData(string sqlCommand)
@@ -87,15 +105,6 @@ namespace Sommerprosjekt_
             //Refreshes the datagridview
             popUpTableBindingSource.DataSource = GetData("SELECT * FROM dbo.PopUpTable");
             dataGridView1.DataSource = popUpTableBindingSource;
-
-        }
-
-        //------------------Shows preview of popup object------------------------------
-        private void btn_Preview_Click(object sender, EventArgs e)
-        {
-
-            //displays header and section in a new form
-            
 
         }
 

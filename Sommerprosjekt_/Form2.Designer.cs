@@ -28,64 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.popUpDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.popUpDataSet = new Sommerprosjekt_.PopUpDataSet();
-            this.label_header = new System.Windows.Forms.Label();
-            this.label_section = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.popUpDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popUpDataSet)).BeginInit();
+            this.header_lbl = new System.Windows.Forms.Label();
+            this.section_lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // popUpDataSetBindingSource
+            // header_lbl
             // 
-            this.popUpDataSetBindingSource.DataSource = this.popUpDataSet;
-            this.popUpDataSetBindingSource.Position = 0;
+            this.header_lbl.AutoSize = true;
+            this.header_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.header_lbl.Location = new System.Drawing.Point(29, 19);
+            this.header_lbl.Name = "header_lbl";
+            this.header_lbl.Size = new System.Drawing.Size(60, 16);
+            this.header_lbl.TabIndex = 2;
+            this.header_lbl.Text = "cxvcxvxc";
             // 
-            // popUpDataSet
+            // section_lbl
             // 
-            this.popUpDataSet.DataSetName = "PopUpDataSet";
-            this.popUpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label_header
-            // 
-            this.label_header.AutoSize = true;
-            this.label_header.Location = new System.Drawing.Point(85, 45);
-            this.label_header.Name = "label_header";
-            this.label_header.Size = new System.Drawing.Size(53, 16);
-            this.label_header.TabIndex = 0;
-            this.label_header.Text = "Header";
-            // 
-            // label_section
-            // 
-            this.label_section.AutoSize = true;
-            this.label_section.Location = new System.Drawing.Point(88, 102);
-            this.label_section.Name = "label_section";
-            this.label_section.Size = new System.Drawing.Size(52, 16);
-            this.label_section.TabIndex = 1;
-            this.label_section.Text = "Sectoin";
+            this.section_lbl.AutoSize = true;
+            this.section_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.section_lbl.Location = new System.Drawing.Point(29, 50);
+            this.section_lbl.Name = "section_lbl";
+            this.section_lbl.Size = new System.Drawing.Size(30, 15);
+            this.section_lbl.TabIndex = 3;
+            this.section_lbl.Text = "xcvc";
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label_section);
-            this.Controls.Add(this.label_header);
+            this.ClientSize = new System.Drawing.Size(369, 450);
+            this.Controls.Add(this.section_lbl);
+            this.Controls.Add(this.header_lbl);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.popUpDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popUpDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource popUpDataSetBindingSource;
-        private PopUpDataSet popUpDataSet;
-        private System.Windows.Forms.Label label_header;
-        private System.Windows.Forms.Label label_section;
+        private System.Windows.Forms.Label header_lbl;
+        private System.Windows.Forms.Label section_lbl;
     }
 }
