@@ -15,25 +15,17 @@ namespace Sommerprosjekt_
 {
     public partial class Form1 : Form
     {
-        DBConnect con = new DBConnect();
-        private static ArrayList ListID = new ArrayList();
-        private static ArrayList ListHeader = new ArrayList();
-        private static ArrayList ListSection = new ArrayList();
 
-        private BindingSource bindingsource1 = new BindingSource();
+        //private BindingSource bindingsource1 = new BindingSource();
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void btn_refresh_Click(object sender, EventArgs e)
-        {
-            bindingsource1.DataSource = GetData("SELECT * FROM dbo.PopUpTable");
-            dataGridView1.DataSource = bindingsource1;
-
-        }
+     
         
-        //sender inn en sql spørring og får ut tabellen..
+        //to update the datagridview the GetData function does a query to get all data,
+        //this happens after each insert, update and delete
         private static DataTable GetData(string sqlCommand)
         {
             string connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
@@ -91,7 +83,11 @@ namespace Sommerprosjekt_
                     MessageBox.Show(ex.Message);
                 }
             }
-            
+
+            //Refreshes the datagridview
+            popUpTableBindingSource.DataSource = GetData("SELECT * FROM dbo.PopUpTable");
+            dataGridView1.DataSource = popUpTableBindingSource;
+
         }
 
         //------------------Shows preview of popup object------------------------------
@@ -177,7 +173,10 @@ namespace Sommerprosjekt_
             
             //Closes connection
             cnn.Close();
-            
+
+            //Refreshes the datagridview
+            popUpTableBindingSource.DataSource = GetData("SELECT * FROM dbo.PopUpTable");
+            dataGridView1.DataSource = popUpTableBindingSource;
 
         }
 
@@ -207,7 +206,10 @@ namespace Sommerprosjekt_
 
             //Closes connection
             cnn.Close();
-            
+
+            //Refreshes the datagridview
+            popUpTableBindingSource.DataSource = GetData("SELECT * FROM dbo.PopUpTable");
+            dataGridView1.DataSource = popUpTableBindingSource;
         }
 
 
