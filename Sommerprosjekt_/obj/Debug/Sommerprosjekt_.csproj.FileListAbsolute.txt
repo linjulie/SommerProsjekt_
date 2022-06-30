@@ -8,8 +8,8 @@ C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerpr
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.csproj.CoreCompileInputs.cache
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.exe
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.pdb
-C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.Form2.resources
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\bin\Debug\PopUp.mdf
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\bin\Debug\PopUp_log.ldf
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\login_form.loginForm.resources
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.Form1.resources
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.Form2.resources

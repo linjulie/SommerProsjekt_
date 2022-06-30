@@ -21,8 +21,8 @@ namespace Sommerprosjekt_
         {
             InitializeComponent();
         }
-
-     
+        
+        public 
         
         //to update the datagridview the GetData function does a query to get all data,
         //this happens after each insert, update and delete
@@ -94,10 +94,12 @@ namespace Sommerprosjekt_
         private void btn_Preview_Click(object sender, EventArgs e)
         {
 
-            //displays header and section in a new form
-            
-
+            //When pressed, values entered in header and section are shown in a popup window
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+           
         }
+
 
         //--------------------------------------Shows all data-------------------------------
         private void btn_connect_Click(object sender, EventArgs e)
