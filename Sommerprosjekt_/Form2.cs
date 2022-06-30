@@ -17,12 +17,16 @@ namespace Sommerprosjekt_
         public Form2()
         {
             InitializeComponent();
+            header_lbl.Text = Form1.header;
+            section_lbl.Text = Form1.section;
         }
 
 
         //in Form2.Designer.cs the textboxes are set to display the values from textboxes from form 1
         private void Form2_Load(object sender, EventArgs e)
         {
+
+
 
         }
 
