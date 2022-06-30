@@ -33,6 +33,7 @@ namespace Sommerprosjekt_
 
         }
         
+        //sender inn en sql spørring og får ut tabellen..
         private static DataTable GetData(string sqlCommand)
         {
             string connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
