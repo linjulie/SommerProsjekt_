@@ -22,7 +22,6 @@ namespace Sommerprosjekt_
         }
 
 
-        //in Form2.Designer.cs the textboxes are set to display the values from textboxes from form 1
         private void Form2_Load(object sender, EventArgs e)
         {
 
