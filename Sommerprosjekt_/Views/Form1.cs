@@ -75,11 +75,14 @@ namespace Sommerprosjekt_
         //--------------------Delete object------------------------------
         private void btn_delete_Click(object sender, EventArgs e)
         {
-
-            var confirmResult = MessageBox.Show("Are you sure you want to delete this object?", "Confirm Delete", MessageBoxButtons.YesNo);
+            //Shows confirm dialog
+            var confirmResult = MessageBox.Show("Are you sure you want to delete this popup: " + txtbox_Header.Text + "?", 
+                                                "Confirm Delete", 
+                                                 MessageBoxButtons.YesNo);
 
             if (confirmResult == DialogResult.Yes)
             {
+                //Delete object
                 var sq = new Controllers.SqlQueries();
                 sq.DeleteObject(txtbox_ID.Text);
 
