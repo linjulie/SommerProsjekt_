@@ -38,8 +38,6 @@
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Preview = new System.Windows.Forms.Button();
             this.txtbox_Header = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_connect = new System.Windows.Forms.Button();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -60,7 +58,6 @@
             this.headerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtbox_ID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.popUpTableTableAdapter = new Sommerprosjekt_.SommerProsjektDataSet2TableAdapters.PopUpTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.popUpTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet2)).BeginInit();
@@ -74,11 +71,11 @@
             // 
             this.inputBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpTableBindingSource, "Section", true));
             this.inputBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.inputBox1.Location = new System.Drawing.Point(95, 110);
+            this.inputBox1.Location = new System.Drawing.Point(32, 94);
             this.inputBox1.Multiline = true;
             this.inputBox1.Name = "inputBox1";
             this.inputBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.inputBox1.Size = new System.Drawing.Size(335, 448);
+            this.inputBox1.Size = new System.Drawing.Size(352, 464);
             this.inputBox1.TabIndex = 2;
             // 
             // popUpTableBindingSource
@@ -103,9 +100,9 @@
             // 
             // btn_Save
             // 
-            this.btn_Save.Location = new System.Drawing.Point(461, 81);
+            this.btn_Save.Location = new System.Drawing.Point(413, 110);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(75, 23);
+            this.btn_Save.Size = new System.Drawing.Size(82, 26);
             this.btn_Save.TabIndex = 3;
             this.btn_Save.Text = "Insert";
             this.btn_Save.UseVisualStyleBackColor = true;
@@ -113,9 +110,9 @@
             // 
             // btn_Preview
             // 
-            this.btn_Preview.Location = new System.Drawing.Point(461, 270);
+            this.btn_Preview.Location = new System.Drawing.Point(413, 278);
             this.btn_Preview.Name = "btn_Preview";
-            this.btn_Preview.Size = new System.Drawing.Size(75, 23);
+            this.btn_Preview.Size = new System.Drawing.Size(82, 26);
             this.btn_Preview.TabIndex = 4;
             this.btn_Preview.Text = "Preview";
             this.btn_Preview.UseVisualStyleBackColor = true;
@@ -125,30 +122,10 @@
             // 
             this.txtbox_Header.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpTableBindingSource, "Header", true));
             this.txtbox_Header.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtbox_Header.Location = new System.Drawing.Point(95, 81);
+            this.txtbox_Header.Location = new System.Drawing.Point(32, 66);
             this.txtbox_Header.Name = "txtbox_Header";
-            this.txtbox_Header.Size = new System.Drawing.Size(335, 22);
+            this.txtbox_Header.Size = new System.Drawing.Size(352, 22);
             this.txtbox_Header.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 88);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 16);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Header";
-            // 
-            // btn_connect
-            // 
-            this.btn_connect.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btn_connect.Location = new System.Drawing.Point(95, 580);
-            this.btn_connect.Name = "btn_connect";
-            this.btn_connect.Size = new System.Drawing.Size(239, 23);
-            this.btn_connect.TabIndex = 8;
-            this.btn_connect.Text = "Show PopUp Table";
-            this.btn_connect.UseVisualStyleBackColor = false;
-            this.btn_connect.Click += new System.EventHandler(this.btn_connect_Click);
             // 
             // bindingNavigator1
             // 
@@ -163,7 +140,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1056, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1236, 25);
             this.bindingNavigator1.TabIndex = 0;
             // 
             // bindingNavigatorAddNewItem
@@ -257,9 +234,9 @@
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(461, 139);
+            this.btn_update.Location = new System.Drawing.Point(413, 160);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(75, 23);
+            this.btn_update.Size = new System.Drawing.Size(82, 26);
             this.btn_update.TabIndex = 9;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
@@ -267,28 +244,31 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(461, 200);
+            this.btn_delete.BackColor = System.Drawing.Color.Transparent;
+            this.btn_delete.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btn_delete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_delete.Location = new System.Drawing.Point(413, 216);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.Size = new System.Drawing.Size(82, 26);
             this.btn_delete.TabIndex = 10;
             this.btn_delete.Text = "Delete";
-            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.UseVisualStyleBackColor = false;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersHeight = 29;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.popUpIDDataGridViewTextBoxColumn,
             this.headerDataGridViewTextBoxColumn,
             this.sectionDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.popUpTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(566, 82);
+            this.dataGridView1.Location = new System.Drawing.Point(526, 66);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(429, 452);
+            this.dataGridView1.Size = new System.Drawing.Size(590, 492);
             this.dataGridView1.TabIndex = 11;
             // 
             // popUpIDDataGridViewTextBoxColumn
@@ -320,19 +300,11 @@
             // 
             this.txtbox_ID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popUpTableBindingSource, "PopUpID", true));
             this.txtbox_ID.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtbox_ID.Location = new System.Drawing.Point(95, 42);
+            this.txtbox_ID.Location = new System.Drawing.Point(32, 28);
             this.txtbox_ID.Name = "txtbox_ID";
+            this.txtbox_ID.ReadOnly = true;
             this.txtbox_ID.Size = new System.Drawing.Size(85, 22);
             this.txtbox_ID.TabIndex = 12;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 16);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "ID";
             // 
             // popUpTableTableAdapter
             // 
@@ -342,15 +314,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1056, 625);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(1236, 625);
             this.Controls.Add(this.txtbox_ID);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.bindingNavigator1);
-            this.Controls.Add(this.btn_connect);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbox_Header);
             this.Controls.Add(this.btn_Preview);
             this.Controls.Add(this.btn_Save);
@@ -374,8 +343,6 @@
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Preview;
         private System.Windows.Forms.TextBox txtbox_Header;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_connect;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -395,7 +362,6 @@
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtbox_ID;
-        private System.Windows.Forms.Label label2;
         private SommerProsjektDataSet2 sommerProsjektDataSet2;
         private System.Windows.Forms.BindingSource popUpTableBindingSource;
         private SommerProsjektDataSet2TableAdapters.PopUpTableTableAdapter popUpTableTableAdapter;

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Sommerprosjekt_.Controllers
 {
-    internal class HomeController
+    internal class SqlQueries
     {
         //to update the datagridview the GetData function does a query to get all data,
         //this happens after each insert, update and delete
@@ -30,6 +30,7 @@ namespace Sommerprosjekt_.Controllers
 
             return table;
         }
+        
         public void InsertObject(string header, string section)
         {
             string connectionString;

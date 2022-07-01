@@ -44,39 +44,30 @@ namespace Sommerprosjekt_
         {
             // TODO: This line of code loads data into the 'sommerProsjektDataSet2.PopUpTable' table. You can move, or remove it, as needed.
             this.popUpTableTableAdapter.Fill(this.sommerProsjektDataSet2.PopUpTable);
-            // TODO: This line of code loads data into the 'sommerProsjektDataSet.PopUp' table. You can move, or remove it, as needed.
-            //this.popUpTableAdapter.Fill(this.sommerProsjektDataSet.PopUp);
-            
+
         }
 
         //------------------Inserts new object-----------------------------------------
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            var hc = new Controllers.HomeController();
-            hc.InsertObject(txtbox_Header.Text, inputBox1.Text);
+            var sq = new Controllers.SqlQueries();
+            sq.InsertObject(txtbox_Header.Text, inputBox1.Text);
 
             //Refreshes the datagridview
             string sql = "SELECT * FROM PopUpTable";
-            popUpTableBindingSource.DataSource = Controllers.HomeController.GetData(sql);
+            popUpTableBindingSource.DataSource = Controllers.SqlQueries.GetData(sql);
             dataGridView1.DataSource = popUpTableBindingSource;
 
-        }
-
-        //--------------------------------------Shows all data-------------------------------
-        private void btn_connect_Click(object sender, EventArgs e)
-        {
-            var hc = new Controllers.HomeController();
-            hc.DisplayAllData();
         }
 
         //------------------------Update object------------------------
         private void btn_update_Click(object sender, EventArgs e)
         {
-            var hc = new Controllers.HomeController();
-            hc.UpdateObject(txtbox_ID.Text, txtbox_Header.Text, inputBox1.Text);
+            var sq = new Controllers.SqlQueries();
+            sq.UpdateObject(txtbox_ID.Text, txtbox_Header.Text, inputBox1.Text);
 
             string sql = "SELECT * FROM PopUpTable";
-            popUpTableBindingSource.DataSource = Controllers.HomeController.GetData(sql);
+            popUpTableBindingSource.DataSource = Controllers.SqlQueries.GetData(sql);
             dataGridView1.DataSource = popUpTableBindingSource;
 
         }
@@ -84,13 +75,24 @@ namespace Sommerprosjekt_
         //--------------------Delete object------------------------------
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            var hc = new Controllers.HomeController();
-            hc.DeleteObject(txtbox_ID.Text);
 
-            //Refreshes the datagridview
-            string sql = "SELECT * FROM PopUpTable";
-            popUpTableBindingSource.DataSource = Controllers.HomeController.GetData(sql);
-            dataGridView1.DataSource = popUpTableBindingSource;
+            var confirmResult = MessageBox.Show("Are you sure you want to delete this object?", "Confirm Delete", MessageBoxButtons.YesNo);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                var sq = new Controllers.SqlQueries();
+                sq.DeleteObject(txtbox_ID.Text);
+
+                string sql = "SELECT * FROM PopUpTable";
+                popUpTableBindingSource.DataSource = Controllers.SqlQueries.GetData(sql);
+                dataGridView1.DataSource = popUpTableBindingSource;
+            } else {
+                //do nothing
+                
+            }
+
+
+
         }
 
 
