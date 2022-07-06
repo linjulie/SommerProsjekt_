@@ -140,7 +140,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1236, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1157, 25);
             this.bindingNavigator1.TabIndex = 0;
             // 
             // bindingNavigatorAddNewItem
@@ -314,7 +314,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1236, 625);
+            this.ClientSize = new System.Drawing.Size(1157, 625);
             this.Controls.Add(this.txtbox_ID);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_delete);
@@ -325,7 +325,7 @@
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.inputBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "PopUp Overview";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.popUpTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet2)).EndInit();

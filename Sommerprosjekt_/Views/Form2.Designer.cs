@@ -65,19 +65,19 @@ namespace Sommerprosjekt_
             this.panel1.Controls.Add(this.section_lbl);
             this.panel1.Location = new System.Drawing.Point(-3, 61);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(494, 492);
+            this.panel1.Size = new System.Drawing.Size(494, 637);
             this.panel1.TabIndex = 4;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 554);
+            this.ClientSize = new System.Drawing.Size(492, 696);
             this.Controls.Add(this.header_lbl);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "PopUp Preview";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
