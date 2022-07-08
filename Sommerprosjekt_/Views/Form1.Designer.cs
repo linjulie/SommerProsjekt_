@@ -75,11 +75,11 @@
             this.inputBox1.Multiline = true;
             this.inputBox1.Name = "inputBox1";
             this.inputBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.inputBox1.Size = new System.Drawing.Size(352, 464);
+            this.inputBox1.Size = new System.Drawing.Size(502, 464);
             this.inputBox1.TabIndex = 2;
             // 
             // popUpTableBindingSource
-            // 
+            // currently using this 
             this.popUpTableBindingSource.DataMember = "PopUpTable";
             this.popUpTableBindingSource.DataSource = this.sommerProsjektDataSet2;
             // 
@@ -89,7 +89,7 @@
             this.sommerProsjektDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // popUpBindingSource
-            // 
+            // old table
             this.popUpBindingSource.DataMember = "PopUp";
             this.popUpBindingSource.DataSource = this.sommerProsjektDataSet;
             // 
@@ -100,7 +100,7 @@
             // 
             // btn_Save
             // 
-            this.btn_Save.Location = new System.Drawing.Point(413, 110);
+            this.btn_Save.Location = new System.Drawing.Point(32, 576);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(82, 26);
             this.btn_Save.TabIndex = 3;
@@ -110,7 +110,7 @@
             // 
             // btn_Preview
             // 
-            this.btn_Preview.Location = new System.Drawing.Point(413, 278);
+            this.btn_Preview.Location = new System.Drawing.Point(414, 576);
             this.btn_Preview.Name = "btn_Preview";
             this.btn_Preview.Size = new System.Drawing.Size(82, 26);
             this.btn_Preview.TabIndex = 4;
@@ -124,7 +124,7 @@
             this.txtbox_Header.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbox_Header.Location = new System.Drawing.Point(32, 66);
             this.txtbox_Header.Name = "txtbox_Header";
-            this.txtbox_Header.Size = new System.Drawing.Size(352, 22);
+            this.txtbox_Header.Size = new System.Drawing.Size(502, 22);
             this.txtbox_Header.TabIndex = 6;
             // 
             // bindingNavigator1
@@ -234,7 +234,7 @@
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(413, 160);
+            this.btn_update.Location = new System.Drawing.Point(148, 576);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(82, 26);
             this.btn_update.TabIndex = 9;
@@ -247,7 +247,7 @@
             this.btn_delete.BackColor = System.Drawing.Color.Transparent;
             this.btn_delete.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.btn_delete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_delete.Location = new System.Drawing.Point(413, 216);
+            this.btn_delete.Location = new System.Drawing.Point(265, 576);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(82, 26);
             this.btn_delete.TabIndex = 10;
@@ -264,11 +264,11 @@
             this.headerDataGridViewTextBoxColumn,
             this.sectionDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.popUpTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(526, 66);
+            this.dataGridView1.Location = new System.Drawing.Point(564, 66);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(590, 492);
+            this.dataGridView1.Size = new System.Drawing.Size(552, 492);
             this.dataGridView1.TabIndex = 11;
             // 
             // popUpIDDataGridViewTextBoxColumn

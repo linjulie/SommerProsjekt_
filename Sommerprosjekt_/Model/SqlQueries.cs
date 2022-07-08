@@ -16,7 +16,7 @@ namespace Sommerprosjekt_.Controllers
 
         public static DataTable GetData(string sqlCommand)
         {
-            string connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
+            string connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Integrated Security=True";
 
             SqlConnection popupConnection = new SqlConnection(connectionString);
 
@@ -36,7 +36,7 @@ namespace Sommerprosjekt_.Controllers
             string connectionString;
             string sql;
 
-            connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
+            connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Integrated Security=True";
             sql = "INSERT INTO dbo.PopUpTable ([Header], [Section]) VALUES (@Header, @Section)";
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
@@ -66,7 +66,7 @@ namespace Sommerprosjekt_.Controllers
             string sql;
             SqlConnection cnn;
 
-            connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
+            connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Integrated Security=True";
             sql = "UPDATE dbo.PopUpTable SET Header = @header, Section = @section WHERE PopUpID = @id";
             
             cnn = new SqlConnection(connectionString);
@@ -86,7 +86,7 @@ namespace Sommerprosjekt_.Controllers
             string sql;
             SqlConnection cnn;
 
-            connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Trusted_Connection=True";
+            connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Integrated Security=True";
 
             cnn = new SqlConnection(connectionString);
             cnn.Open();
