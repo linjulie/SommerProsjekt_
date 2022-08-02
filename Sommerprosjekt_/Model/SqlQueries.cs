@@ -30,7 +30,7 @@ namespace Sommerprosjekt_.Controllers
 
             return table;
         }
-        
+
         public void InsertObject(string header, string section)
         {
             string connectionString;
@@ -41,67 +41,95 @@ namespace Sommerprosjekt_.Controllers
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
+                SqlCommand cmd = new SqlCommand(sql, cnn);
+                //Adds the new popup object to the database  
+                cmd.Parameters.AddWithValue("@header", header);
+                cmd.Parameters.AddWithValue("@section", section);
+
                 try
                 {
                     cnn.Open();
-
-                    SqlCommand cmd = new SqlCommand(sql, cnn);
-                    //Adds the new popup object to the database  
-                    cmd.Parameters.AddWithValue("@header", header);
-                    cmd.Parameters.AddWithValue("@section", section);
-                    cmd.ExecuteNonQuery();
+                    Int32 rowsAffected = cmd.ExecuteNonQuery();
                     cnn.Close();
+                    Console.WriteLine("RowsAffected: {0}", rowsAffected);
+
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    Console.WriteLine(ex.Message);
                 }
             }
 
         }
-        
+
         public void UpdateObject(string id, string header, string section)
         {
             string connectionString;
             string sql;
-            SqlConnection cnn;
+            //SqlConnection cnn;
 
             connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Integrated Security=True";
             sql = "UPDATE dbo.PopUpTable SET Header = @header, Section = @section WHERE PopUpID = @id";
-            
-            cnn = new SqlConnection(connectionString);
-            cnn.Open();
 
-            SqlCommand cmd = new SqlCommand(sql, cnn);
-            cmd.Parameters.AddWithValue("@id", id);
-            cmd.Parameters.AddWithValue("@header", header);
-            cmd.Parameters.AddWithValue("@section", section);
-            cmd.ExecuteNonQuery();
-            cnn.Close();
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(sql, cnn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@header", header);
+                cmd.Parameters.AddWithValue("@section", section);
+
+                try
+                {
+                    cnn.Open();
+                    Int32 rowsAffected = cmd.ExecuteNonQuery();
+                    cnn.Close();
+                    Console.WriteLine("RowsAffected: {0}, updated object with id: {1}", rowsAffected, id);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    Console.WriteLine(ex.Message);
+                }
+            }
         }
 
         public void DeleteObject(string id)
         {
             string connectionString;
             string sql;
-            SqlConnection cnn;
+
 
             connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Integrated Security=True";
-
-            cnn = new SqlConnection(connectionString);
-            cnn.Open();
-
             sql = "DELETE FROM dbo.PopUpTable WHERE PopUpID = @id";
 
-            SqlCommand cmd = new SqlCommand(sql, cnn);
-            cmd.Parameters.AddWithValue("@id", id);
-            cmd.ExecuteNonQuery();
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(sql, cnn);
+                cmd.Parameters.AddWithValue("@id", id);
 
-            cnn.Close();
-            
+                try
+                {
+                    cnn.Open();
+                    Int32 rowsAffected = cmd.ExecuteNonQuery();
+                    cnn.Close();
+                    Console.WriteLine("RowsAffected: {0}, deleted object with id:{1}", rowsAffected, id);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        
         }
 
-        public void DisplayAllData()
+
+        
+
+        public void DspAllData()
         {
             string connectionString;
             SqlConnection cnn;
@@ -143,5 +171,8 @@ namespace Sommerprosjekt_.Controllers
             command.Dispose();
             cnn.Close();
         }
+    
     }
+    
 }
+
