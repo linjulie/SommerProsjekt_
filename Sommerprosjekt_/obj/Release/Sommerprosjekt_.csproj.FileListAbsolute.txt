@@ -1,0 +1,15 @@
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\bin\Release\PopUp.mdf
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\bin\Release\PopUp_log.ldf
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\bin\Release\Sommerprosjekt_.exe.config
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\bin\Release\Sommerprosjekt_.exe
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\bin\Release\Sommerprosjekt_.pdb
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Release\Sommerprosjekt_.csproj.AssemblyReference.cache
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Release\Sommerprosjekt_.csproj.SuggestedBindingRedirects.cache
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Release\Sommerprosjekt_.Form1.resources
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Release\Sommerprosjekt_.Form2.resources
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Release\login_form.loginForm.resources
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Release\Sommerprosjekt_.Properties.Resources.resources
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Release\Sommerprosjekt_.csproj.GenerateResource.cache
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Release\Sommerprosjekt_.csproj.CoreCompileInputs.cache
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Release\Sommerprosjekt_.exe
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Release\Sommerprosjekt_.pdb

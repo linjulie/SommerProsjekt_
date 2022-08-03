@@ -59,6 +59,7 @@
             this.sectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtbox_ID = new System.Windows.Forms.TextBox();
             this.popUpTableTableAdapter = new Sommerprosjekt_.SommerProsjektDataSet2TableAdapters.PopUpTableTableAdapter();
+            this.newCommentBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.popUpTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sommerProsjektDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popUpBindingSource)).BeginInit();
@@ -79,7 +80,7 @@
             this.inputBox1.TabIndex = 2;
             // 
             // popUpTableBindingSource
-            // currently using this 
+            // 
             this.popUpTableBindingSource.DataMember = "PopUpTable";
             this.popUpTableBindingSource.DataSource = this.sommerProsjektDataSet2;
             // 
@@ -89,7 +90,7 @@
             this.sommerProsjektDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // popUpBindingSource
-            // old table
+            // 
             this.popUpBindingSource.DataMember = "PopUp";
             this.popUpBindingSource.DataSource = this.sommerProsjektDataSet;
             // 
@@ -303,18 +304,29 @@
             this.txtbox_ID.Location = new System.Drawing.Point(32, 28);
             this.txtbox_ID.Name = "txtbox_ID";
             this.txtbox_ID.ReadOnly = true;
-            this.txtbox_ID.Size = new System.Drawing.Size(85, 22);
+            this.txtbox_ID.Size = new System.Drawing.Size(166, 22);
             this.txtbox_ID.TabIndex = 12;
             // 
             // popUpTableTableAdapter
             // 
             this.popUpTableTableAdapter.ClearBeforeFill = true;
             // 
+            // newCommentBtn
+            // 
+            this.newCommentBtn.Location = new System.Drawing.Point(265, 27);
+            this.newCommentBtn.Name = "newCommentBtn";
+            this.newCommentBtn.Size = new System.Drawing.Size(184, 23);
+            this.newCommentBtn.TabIndex = 13;
+            this.newCommentBtn.Text = "Enter New Comment";
+            this.newCommentBtn.UseVisualStyleBackColor = true;
+            this.newCommentBtn.Click += new System.EventHandler(this.newCommentBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 625);
+            this.Controls.Add(this.newCommentBtn);
             this.Controls.Add(this.txtbox_ID);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_delete);
@@ -368,6 +380,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn popUpIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn headerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sectionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button newCommentBtn;
     }
 }
 

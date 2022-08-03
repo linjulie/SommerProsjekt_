@@ -60,7 +60,6 @@ namespace Sommerprosjekt_.Controllers
                     Console.WriteLine(ex.Message);
                 }
             }
-
         }
 
         public void UpdateObject(string id, string header, string section)
@@ -123,7 +122,6 @@ namespace Sommerprosjekt_.Controllers
                     Console.WriteLine(ex.Message);
                 }
             }
-        
         }
 
 
