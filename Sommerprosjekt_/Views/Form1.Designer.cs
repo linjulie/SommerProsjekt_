@@ -107,7 +107,7 @@
             this.btn_Save.TabIndex = 3;
             this.btn_Save.Text = "Insert";
             this.btn_Save.UseVisualStyleBackColor = true;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            this.btn_Save.Click += new System.EventHandler(this.Btn_Save_Click);
             // 
             // btn_Preview
             // 
@@ -117,7 +117,7 @@
             this.btn_Preview.TabIndex = 4;
             this.btn_Preview.Text = "Preview";
             this.btn_Preview.UseVisualStyleBackColor = true;
-            this.btn_Preview.Click += new System.EventHandler(this.btn_Preview_Click);
+            this.btn_Preview.Click += new System.EventHandler(this.Btn_Preview_Click);
             // 
             // txtbox_Header
             // 
@@ -241,7 +241,7 @@
             this.btn_update.TabIndex = 9;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
-            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            this.btn_update.Click += new System.EventHandler(this.Btn_update_Click);
             // 
             // btn_delete
             // 
@@ -254,7 +254,7 @@
             this.btn_delete.TabIndex = 10;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = false;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            this.btn_delete.Click += new System.EventHandler(this.Btn_delete_Click);
             // 
             // dataGridView1
             // 
@@ -319,7 +319,7 @@
             this.newCommentBtn.TabIndex = 13;
             this.newCommentBtn.Text = "Enter New Comment";
             this.newCommentBtn.UseVisualStyleBackColor = true;
-            this.newCommentBtn.Click += new System.EventHandler(this.newCommentBtn_Click);
+            this.newCommentBtn.Click += new System.EventHandler(this.NewCommentBtn_Click);
             // 
             // Form1
             // 

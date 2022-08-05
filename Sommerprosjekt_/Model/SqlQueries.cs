@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,19 +12,34 @@ namespace Sommerprosjekt_.Controllers
 {
     internal class SqlQueries
     {
+        //retrieving a connectionstring by name
+        static string GetConnectionstring(string name)
+        {
+            //set returnvalue equals null incase of failure
+            string returnValue = null;
+            
+            //looking for the name in the connectionstring settings
+            ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[name];
+            
+            //if found then return the conection string
+            if (settings != null)
+                returnValue = settings.ConnectionString;
+            
+            return returnValue;
+        }
+        
         //to update the datagridview the GetData function does a query to get all data,
         //this happens after each insert, update and delete
-
         public static DataTable GetData(string sqlCommand)
         {
-            string connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Integrated Security=True";
+            string connectionString = GetConnectionstring("myConnectionString");
 
             SqlConnection popupConnection = new SqlConnection(connectionString);
 
             SqlCommand command = new SqlCommand(sqlCommand, popupConnection);
             SqlDataAdapter adapter = new SqlDataAdapter();
             adapter.SelectCommand = command;
-
+            
             DataTable table = new DataTable();
             table.Locale = System.Globalization.CultureInfo.InvariantCulture;
             adapter.Fill(table);
@@ -36,7 +52,7 @@ namespace Sommerprosjekt_.Controllers
             string connectionString;
             string sql;
 
-            connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Integrated Security=True";
+            connectionString = GetConnectionstring("myConnectionString");
             sql = "INSERT INTO dbo.PopUpTable ([Header], [Section]) VALUES (@Header, @Section)";
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
@@ -68,7 +84,7 @@ namespace Sommerprosjekt_.Controllers
             string sql;
             //SqlConnection cnn;
 
-            connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Integrated Security=True";
+            connectionString = GetConnectionstring("myConnectionString");
             sql = "UPDATE dbo.PopUpTable SET Header = @header, Section = @section WHERE PopUpID = @id";
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
@@ -100,7 +116,7 @@ namespace Sommerprosjekt_.Controllers
             string sql;
 
 
-            connectionString = "Server=PKDEMOSYSTEM\\SQLEXPRESS;Initial Catalog=Sommerprosjekt;Integrated Security=True";
+            connectionString = GetConnectionstring("myConnectionString");
             sql = "DELETE FROM dbo.PopUpTable WHERE PopUpID = @id";
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
