@@ -3,12 +3,13 @@ C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\bin\Debug\Sommerpr
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\bin\Debug\Sommerprosjekt_.pdb
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.csproj.AssemblyReference.cache
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.csproj.SuggestedBindingRedirects.cache
-C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.Form1.resources
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.Properties.Resources.resources
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.csproj.GenerateResource.cache
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.csproj.CoreCompileInputs.cache
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.exe
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.pdb
-C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\bin\Debug\Database1.mdf
-C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\bin\Debug\Database1_log.ldf
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\bin\Debug\PopUp.mdf
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\bin\Debug\PopUp_log.ldf
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\login_form.loginForm.resources
+C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.Form1.resources
 C:\Users\Emerson\source\repos\Sommerprosjekt_\Sommerprosjekt_\obj\Debug\Sommerprosjekt_.Form2.resources
